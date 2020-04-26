@@ -1,8 +1,9 @@
-import {Row, Col, Container, Jumbotron} from 'react-bootstrap';
+import {Row, Col, Container} from 'react-bootstrap';
 import React from 'react';
 import {RetroWrapper, RetroHeader, RetroFooter} from './styled';
 import {RetroMenu} from './RetroMenu';
-
+//inspiration
+//https://www.hover.com/blog/10-things-that-used-to-be-on-every-website-that-you-totally-forgot-about/
 export const RetroVibe = () => {
     return (
         <RetroWrapper>
@@ -17,9 +18,9 @@ export const RetroVibe = () => {
                 </Row>
             </Container>
                 <RetroFooter>
-                    <h2>
-                        Copyright © 2018 - 2020 Chioran Ionut Catalin.
-                    </h2>
+                    <div>
+                        Copyright © 2020 - {new Date().getFullYear()} Chioran Ionut Catalin.
+                    </div>
                 </RetroFooter>
             </RetroWrapper>
     );

@@ -4,7 +4,6 @@ import About from 'assets/gifs/About.gif'
 import Blog from 'assets/gifs/Blog.gif'
 import Experience from 'assets/gifs/Experience.gif'
 import Home from 'assets/gifs/Home.gif'
-import {Jumbotron} from 'react-bootstrap';
 
 export const validPaths = [About, Blog, Experience, Home];
 

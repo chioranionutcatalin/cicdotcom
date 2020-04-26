@@ -25,4 +25,5 @@ export const RetroFooter = styled.footer`
   position: absolute;
   bottom: 0;
   width: 100%;
+  background-color: grey;
 `;
