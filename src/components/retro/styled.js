@@ -69,6 +69,8 @@ font-family: 'Audiowide', cursive !important;
      text-align: center;
   }
   nav{
+    background: url("https://media.giphy.com/media/RxR1KghIie2iI/giphy.gif");
+    background-size: cover;
     border: 3px solid #00f;
     grid-area: nav;
   }
