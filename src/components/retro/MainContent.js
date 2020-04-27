@@ -22,7 +22,9 @@ export const MainContent = (props) => {
     }
 
     return (
-        <JumboBox>{sectionContent}</JumboBox>
+        <JumboBox>
+            {sectionContent}
+        </JumboBox>
     );
  };
 

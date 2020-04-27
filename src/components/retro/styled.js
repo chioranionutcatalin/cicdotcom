@@ -9,6 +9,7 @@ table, th, td {
 
 
 export const JumboBox = styled(Jumbotron)`
+    font-family: 'Bevan', cursive !important;
     background-color: transparent;
     color: white;
     .jumbotron{
@@ -37,6 +38,7 @@ export const MenuItem = styled.div`
 `;
 
 export const Content = styled.div`
+font-family: 'Audiowide', cursive !important;
   background: url("https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif");
   background-size: cover;
   display: grid;
@@ -80,4 +82,5 @@ export const Content = styled.div`
      border: 3px solid #00f;
      text-align: center;
   }
+   
 `;

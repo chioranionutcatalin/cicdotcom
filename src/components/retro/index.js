@@ -6,6 +6,8 @@ import Home from 'assets/gifs/Home.gif'
 import Blog from 'assets/gifs/Blog.gif'
 import {MainContent} from 'components/retro/MainContent'
 import {sections} from 'defs/defs';
+import soundof90 from 'assets/sounds/soundof90.mp3'
+
 //inspiration
 //https://www.hover.com/blog/10-things-that-used-to-be-on-every-website-that-you-totally-forgot-about/
 export const RetroVibe = () => {
@@ -13,16 +15,6 @@ export const RetroVibe = () => {
     const [section, setSection] = useState('Home');
 
     useEffect(() => {
-        const loadScript = (src) =>  {
-            const tag = document.createElement('script');
-            tag.async = false;
-            tag.src = src;
-            const body = document.getElementsByTagName('body')[0];
-            body.appendChild(tag);
-        };
-
-        loadScript('helpers/js/ghostCursor.js');
-
         setSection(section)
     }, [section]);
 
@@ -30,7 +22,12 @@ export const RetroVibe = () => {
        <Content>
            <header>
                <hr/>
-                    <h2>Just a retro/vintage 90s look alike presentation website!?</h2>
+               <h2>Just a retro/vintage 90s look alike presentation website!?</h2>
+               <audio controls>
+                   <source src={soundof90} type="audio/mp3"/>
+                   <source src={soundof90} type="audio/mp3"/>
+                   Your browser does not support the audio element.
+               </audio>
                <hr/>
            </header>
            <nav>
@@ -46,7 +43,7 @@ export const RetroVibe = () => {
                    <MainContent section={section}/>
                </main>
                <footer>
-                   <hr/>
+
                     <h2>Copyright © 2020 - {new Date().getFullYear()} Chioran Ionut Catalin.</h2>
                    <hr/>
                </footer>
