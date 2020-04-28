@@ -1,4 +1,4 @@
 export type studiesType = {
-    "Bachelor's degree": any;
-    "Master's degree": any;
-}
+  "Bachelor's degree": any;
+  "Master's degree": any;
+};
