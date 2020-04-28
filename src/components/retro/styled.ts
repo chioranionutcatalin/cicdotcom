@@ -32,7 +32,7 @@ export const Www = styled.div`
 export const MenuItem = styled.div`
     height: 100px;
     object-fit: cover;
-    background: url(${(props) => {
+    background: url(${(props: {item: string}) => {
         console.log(props.item);
     return props.item}}) no-repeat center center;
 `;

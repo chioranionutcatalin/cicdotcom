@@ -3,8 +3,7 @@ import {sections, githublink, homeContent, studies, skills, experienceContent} f
 import {RetroTableWrapper, JumboBox} from 'components/retro/styled';
 import {Container} from 'react-bootstrap';
 
-
-export const MainContent = (props) => {
+export const MainContent = (props : {section: string}) => {
     const {section} = props;
     let sectionContent;
     switch(section) {
@@ -28,11 +27,6 @@ export const MainContent = (props) => {
     );
  };
 
-const addComment = (event) => {
-    event.preventDefault();
-    JSON.stringify(event);
-};
-
 
 export const Home = () => {
     return (
@@ -49,15 +43,13 @@ export const Home = () => {
                 {homeContent.description}
             </p>
             <div>
-                <a href="https://info.flagcounter.com/OTDv"><img src="https://s05.flagcounter.com/countxl/OTDv/bg_FFFFFF/txt_000000/border_787878/columns_3/maxflags_12/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"/></a>
+                <a href="https://info.flagcounter.com/OTDv"><img src="https://s05.flagcounter.com/countxl/OTDv/bg_FFFFFF/txt_000000/border_787878/columns_3/maxflags_12/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" /></a>
             </div>
         </Container>
     );
 };
 
 export const Experience = () => {
-
-
     const headerItems = Object.keys(experienceContent.Softvision);
     const svJob = Object.values(experienceContent.Softvision);
     const redSharpJob = Object.values(experienceContent.Redsharp);
@@ -88,6 +80,9 @@ export const Experience = () => {
 };
 
 export const About = () => {
+
+    let structStudies: any = studies;
+
     return (
         <div>
                 <h4>
@@ -104,13 +99,13 @@ export const About = () => {
                 <table>
                     <tr>
                         <th/>
-                        <th>{Object.keys(studies)[0]}</th>
-                        <th>{Object.keys(studies)[1]}</th>
+                        <th>{Object.keys(structStudies)[0]}</th>
+                        <th>{Object.keys(structStudies)[1]}</th>
                     </tr>
                     <tr>
-                        <td>{studies[Object.keys(studies)[0]].from}</td>
-                        <td>{studies[Object.keys(studies)[0]].in}</td>
-                        <td>{studies[Object.keys(studies)[1]].in}</td>
+                        <td>{structStudies[Object.keys(structStudies)[0]].from}</td>
+                        <td>{structStudies[Object.keys(structStudies)[0]].in}</td>
+                        <td>{structStudies[Object.keys(structStudies)[1]].in}</td>
                     </tr>
                 </table>
             </RetroTableWrapper>
@@ -142,10 +137,10 @@ export const About = () => {
                     </tr>
                     <tr>
                         <td><label htmlFor="message">Message:</label></td>
-                        <td><textarea id="message" name="message" rows="5" cols="20"/></td>
+                        <td><textarea id="message" name="message" rows={5} cols={20}/></td>
                     </tr>
                     <tr>
-                        <button onClick={() => addComment()}>Send</button>
+                        <button onClick={() => console.log('alabala')}>Send</button>
                     </tr>
                 </table>
             </form>
