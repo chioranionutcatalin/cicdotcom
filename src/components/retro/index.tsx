@@ -6,7 +6,7 @@ import Home from 'assets/gifs/Home.gif'
 import Blog from 'assets/gifs/Blog.gif'
 import {MainContent} from 'components/retro/MainContent'
 import {sections} from 'defs/defs';
-import soundof90 from 'assets/sounds/soundof90.mp3'
+import Sound90s from 'assets/sounds/Sound90s.mp3';
 
 //inspiration
 //https://www.hover.com/blog/10-things-that-used-to-be-on-every-website-that-you-totally-forgot-about/
@@ -24,8 +24,8 @@ export const RetroVibe = () => {
                <hr/>
                <h2>Just a retro/vintage 90s look alike presentation website!?</h2>
                <audio controls>
-                   <source src={soundof90} type="audio/mp3"/>
-                   <source src={soundof90} type="audio/mp3"/>
+                   <source src={Sound90s} type="audio/mp3"/>
+                   <source src={Sound90s} type="audio/mp3"/>
                    Your browser does not support the audio element.
                </audio>
                <hr/>
